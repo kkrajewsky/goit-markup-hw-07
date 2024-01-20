@@ -29,7 +29,7 @@
 
 
 .container {
-    max-width: 1158px;
+    max-width: 480px;
     width: 100%;
     margin: 0 auto;
     padding: 0 16px;
@@ -94,23 +94,7 @@ body {
     font-weight: 400;
 }
 
-footer a {
-    text-decoration: none;
-}
 
-.footer-box {
-    background-color: var(--dark-background-color);
-}
-
-.footer-box p {
-    color: var(--light-mode-background);
-    font-family: var(--main-font);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 0.32px;
-}
 
 .solution-list {
     padding-top: 96px;
@@ -183,8 +167,7 @@ footer a {
 
 .team-list {
     background-color: var(--button-background);
-    padding: 120px 0 120px;
-    max-width: 1440px;
+    padding: 96px 0 96px;
     margin: 0 auto;
     flex-direction: column;
 }
@@ -437,23 +420,9 @@ footer a {
     color: var(--button-hover-text-color);
 }
 
-.footer-box {
-    background-color: var(--dark-background-color);
-    display: flex;
-    align-items: flex-start;
-    min-width: 1440px;
-}
+/* ------------------------------FOOTER------------------------------ */
 
-.footer-box .footer-margin {
-    margin: 101.5px 0px 100px 156px;
-    padding: 0px;
-}
 
-.footer-box p {
-    width: 264px;
-    height: 72px;
-    margin-top: 17.5px;
-}
 
 .footer-list-icons {
     display: flex;
@@ -499,14 +468,54 @@ footer a {
     letter-spacing: 0.32px;
     color: var(--background-color);
     margin: 0 auto;
+    justify-content: center;
+    display: flex;
 }
 
 .social-footer {
-    margin: 100px 0 100px 120px;
+    margin: 0 auto;
     padding-inline-start: 0px;
 
 }
 
+.mobile-footer-logo-box {
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.footer-box {
+    background-color: var(--dark-background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.footer-box p {
+    color: var(--light-mode-background);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+    width: 264px;
+    height: 72px;
+    margin-top: 17.5px;
+}
+
+.footer-box .footer-margin {
+    margin: 97.5px 80px 72px;
+    padding: 0px;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
 .solution-icons {
     background-color: var(--button-background);
     height: 120px;
@@ -600,7 +609,8 @@ footer a {
     gap: 30px;
     margin: 72px 0 120px;
     padding-inline-start: 0px;
-
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .customers-list a {
@@ -610,7 +620,7 @@ footer a {
     align-items: center;
     justify-content: center;
     display: flex;
-    width: 168px;
+    width: 190px;
     height: 88px;
     cursor: pointer;
 }
@@ -619,6 +629,7 @@ footer a {
     border-color: var(--button-hover);
     fill: var(--button-hover);
 }
+
 
 .customers-tittle h2 {
     text-align: center;
@@ -629,7 +640,7 @@ footer a {
     line-height: 1.11;
     letter-spacing: 0.72px;
     text-transform: capitalize;
-    margin: 120px auto 0;
+    margin: 96px auto 0;
 }
 
 .nletter-style input {
@@ -659,13 +670,19 @@ footer a {
 
 
 .nletter-style {
-    margin: 100px auto 132px 80px;
+    margin: 72px 0px 16px;
+}
+
+.mobile-sub-tittle {
+    display: flex;
+    justify-content: center;
 }
 
 .nletter-email-style {
     color: var(--background-color);
     font-family: inherit;
     font-weight: 400;
+    opacity: 0.3;
 }
 
 .nletter-email-style::placeholder {
@@ -677,6 +694,7 @@ footer a {
     line-height: 2;
     letter-spacing: 0.48px;
     padding: 8px 212px 8px 0px;
+    opacity: 0.3;
 }
 
 .nletter-button button {
@@ -703,7 +721,7 @@ footer a {
 }
 
 .nletter-button {
-    margin: 140px 159px 132px 24px;
+    margin: 16px auto 96px;
 
 }
 
@@ -954,13 +972,7 @@ input label:focus {
 }
 */
 
-input:not([type="checbox"]) {
-    border: none;
-}
 
-input:not([type="checbox"]):focus {
-    outline: none;
-}
 
 .input-wrapper {
     border: 1px solid var(--modal-border-color);
@@ -1044,36 +1056,54 @@ input:not([type="checbox"]):focus {
     margin: 24px auto 24px;
 }
 
-input[type="checkbox"] {
-    appearance: none;
-}
-
-.fake-checkbox {
-    opacity: 0;
-}
-
-input:checked+.fake-checkbox {
-    opacity: 1;
-}
-
 input[id="nletter-email"] {
     border: 1px solid var(--background-color);
+    width: 100%;
 }
 
+
 .checkbox-check {
-    border: 1px solid var(--modal-border-color);
-    border-radius: 4px;
     padding: 3px;
-    fill: var(--button-hover-text-color);
-    background-color: var(--button-text-color);
-    display: inline;
-    align-items: center;
+    width: 16px;
+    height: 16px;
 }
 
 .check-position {
+    position: relative;
     display: flex;
-    gap: 8px;
+    flex-direction: row;
+    justify-content: start;
     align-items: center;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.fake-checkbox {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    fill: transparent;
+    transition-property: background-color, border, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.checkbox-is:checked+.fake-checkbox .checkbox-check {
+    background-color: #404BBF;
+    border: none;
+    fill: #F4F4FD;
+}
+
+.checkbox-is {
+    position: absolute;
+    width: 16px;
+    height: 16px;
 }
 
 @media screen and (min-width:320px) {
@@ -1088,7 +1118,9 @@ input[id="nletter-email"] {
 
 @media screen and (min-width: 768px) {
 
-
+    .container {
+        max-width: 768px;
+    }
     .solution-list h3 {
         justify-content: flex-start;
     }
@@ -1096,10 +1128,6 @@ input[id="nletter-email"] {
     .solution-list li {
         max-width: 356px;
         max-height: 120px;
-    }
-
-    .solution-list {
-    
     }
 
     .team-list li {
@@ -1118,10 +1146,68 @@ input[id="nletter-email"] {
         display: flex;
         
     }
+
+    .footer-box .footer-margin {
+        margin: 97.5px 24px 72px 108px;
+        max-width: 264px;
+        max-height: 112px;
+        
+    }
+
+    .mobile-footer-logo-box {
+        justify-content: flex-start;
+    }
+
+    .social-footer h4 {
+        padding: 0px;
+        margin: 0px;
+        justify-content: flex-start;
+        display: flex;
+    }
+
+    .social-footer {
+        max-width: 208px;
+        max-height: 80px;
+    }
+
+    .social-footer {
+        margin: 96px auto 112px 0px;
+    }
+
+    .footer-box {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .footer-box .footer-margin {
+        margin: 97.5px 24px 72px 108px;
+        padding: 0px;
+    }
+
+    .nletter-style {
+        margin: 0px 24px 96px 108px;
+        width: 264px;
+    }
+    .mobile-sub-tittle {
+        justify-content: flex-start;
+    }
+
+    .nletter-button {
+        margin: 40px 0px 96px;
+    }
+
+    .customers-list a {
+        width: 168px;
+    }
 }
 
 @media screen and (min-width: 1158px) {
     
+    .container {
+        max-width: 1158px;
+    }
+
     .solution-list {
         padding-top: 120px;
     }
@@ -1152,5 +1238,17 @@ input[id="nletter-email"] {
 
     .team-list {
         max-width: 1440px;
+    }
+
+    .customers-list {
+        flex-wrap: nowrap;
+
+    }
+
+    .footer-box {
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    justify-content: center;
     }
 }
