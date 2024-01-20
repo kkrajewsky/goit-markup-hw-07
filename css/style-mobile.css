@@ -27,7 +27,6 @@
     --transition-time: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 .container {
     max-width: 480px;
     width: 100%;
@@ -428,7 +427,7 @@ body {
     display: flex;
     padding-inline-start: 0px;
     gap: 16px;
-    padding-top: 16px;
+    margin: 0px;
 }
 
 .footer-list-icons li {
@@ -443,7 +442,7 @@ body {
     fill: var(--button-hover-text-color);
     cursor: pointer;
     background-color: var(--icon-color);
-    margin: 0 0 32px;
+    margin: 16px 0 32px;
 }
 
 .footer-list-icons li:hover {
@@ -508,9 +507,9 @@ footer a {
     margin-top: 17.5px;
 }
 
-.footer-box .footer-margin {
-    margin: 97.5px 80px 72px;
-    padding: 0px;
+.footer-margin {
+    margin: 97.5px auto 72px;
+    padding: 0;
 }
 
 
@@ -1180,10 +1179,6 @@ input[id="nletter-email"] {
         justify-content: flex-start;
     }
 
-    .footer-box .footer-margin {
-        margin: 97.5px 24px 72px 108px;
-        padding: 0px;
-    }
 
     .nletter-style {
         margin: 0px 24px 96px 108px;
@@ -1204,6 +1199,7 @@ input[id="nletter-email"] {
 
 @media screen and (min-width: 1158px) {
     
+
     .container {
         max-width: 1158px;
     }
@@ -1246,9 +1242,35 @@ input[id="nletter-email"] {
     }
 
     .footer-box {
-    flex-wrap: wrap;
-    flex-direction: row;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        min-width: 1440px;
+        padding: 0;
+    }
 
-    justify-content: center;
+    .nletter-email-style {
+    opacity: 1;
+    }
+
+    .nletter-email-style::placeholder {
+        opacity: 1;
+    }
+
+    .social-footer {
+        margin: 100px 0 132px 0px;
+    }
+
+    .nletter-style {
+        margin: 100px 24px 132px 80px;
+    }
+
+    .footer-box .footer-margin {
+        margin: 101.5px 120px 100px 156px;
+        max-height: 72px;
+    }
+
+    .nletter-button {
+        margin: 140px 159px 132px 0px;
     }
 }
