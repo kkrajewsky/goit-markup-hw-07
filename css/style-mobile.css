@@ -27,6 +27,161 @@
     --transition-time: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* HAMBURGER */ 
+
+.hamburger-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    position: absolute;
+    padding: 0;
+}
+
+
+.hamburger-svg {
+    stroke: var(--hero-background);
+}
+
+.hamburger-svg:focus,
+.hamburger-svg:hover {
+    stroke: var(--button-hover);
+    transition-duration: 250ms;
+    transition-timing-function: var(--transition-time);
+}
+
+.close-button-mobile {
+    border: 1px solid #0000001A;
+    border-radius: 50%;
+    cursor: pointer;
+    fill: var(--dark-background-color);
+    background-color: var(--button-border);
+    padding: 6px;
+}
+
+.close-button-mobile:active {
+    fill: var(--background-color);
+    background-color: var(--button-text-color);
+    outline: none;
+}
+
+.mobile-nav-list a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.mobile-nav-list a:focus,
+.mobile-nav-list a:hover {
+    text-decoration: none;
+    color: var(--button-hover);
+    transition: var(--transition-time);
+    transition-duration: 250ms;
+}
+
+.mobile-nav-style {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 40px;
+    text-transform: capitalize;
+    padding: 0;
+    margin: 32px auto 284px;
+}
+
+
+
+.mobile-nav-list {
+    font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
+}
+
+.close-button-box {
+    background: none;
+    border: none;
+    position: relative;
+    left: 80%;
+    top: 2%;
+}
+
+.js-menu-container {
+    position: fixed;
+    inset: 1;
+    /*
+    translate: -100% 0 0;*/
+    transition: transform 250ms ease-in-out;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    top: -16px;
+}
+
+.mobile-nav-list h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-adress-style {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 48px;
+    padding: 0;
+    align-items: flex-start;
+    font-style: normal;
+}
+
+.email-mobile {
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+}
+
+.mobile-box-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 48px 0 40px;
+    padding: 0;
+    display: flex;
+    gap: 56px;
+    justify-content: space-between;
+}
+
+.mobile-box-icons li {
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    border-radius: 50%;
+    fill: var(--button-hover-text-color);
+    cursor: pointer;
+    background-color: var(--icon-color);
+    
+
+}
+
+.mobile-box-icons svg {
+    fill: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 24px;
+    height: 24px;
+}
+
+.mobile-box-icons li:hover {
+    background-color: var(--icon-hover-color);
+}
+
+/* ------------------------------------- */
 .container {
     max-width: 480px;
     width: 100%;
@@ -58,7 +213,7 @@ ul {
 .logo-box {
     max-width: 115px;
     max-height: 24px;
-    margin: 25.5px auto 23.5px;
+    margin: 25.5px 0 23.5px 16px;
 }
 
 .nav-box a {
@@ -1123,10 +1278,26 @@ input[id="nletter-email"] {
     body {
         overflow-x: hidden;
     }
+
+        .hamburger-button {
+            margin-left: 280px;
+        }
+}
+
+@media screen and (min-width:360px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .hamburger-button {
+        margin-left: 320px;
+    }
 }
 
 @media screen and (min-width: 480px) {
-    
+    .hamburger-button {
+            margin-left: 380px;
+        }
 }
 
 @media screen and (min-width: 768px) {
@@ -1138,6 +1309,10 @@ input[id="nletter-email"] {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/background-tablet@2x.png");
         }
     }
+
+.js-menu-container {
+    translate: -100% 0 0;
+}
 
 .contact-list {
     display: flex;
@@ -1179,8 +1354,12 @@ input[id="nletter-email"] {
         max-width: 768px;
     }
 
+    .hamburger-button {
+        visibility: hidden;
+    }
+
     .main-theme-box h1 {
-        margin: 112px 136px 72px;
+        margin: 112px auto 36px;
         max-width: 496px;
         max-height: 120px;
         font-size: 56px;
