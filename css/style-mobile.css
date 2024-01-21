@@ -63,12 +63,13 @@ ul {
 }
 
 .main-theme-box {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/main-background.jpg');
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/background-mobile@1x.png');
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    max-width: 1440px;
+    max-width: 428px;
+    max-height: 432px;
     background-position: center;
     margin: 0 auto;
     background-repeat: no-repeat;
@@ -78,15 +79,17 @@ ul {
 .main-theme-box h1 {
     color: var(--background-color);
     font-family: inherit;
-    font-size: 56px;
+    font-size: 36px;
     font-weight: 700;
-    line-height: 1.07;
-    letter-spacing: 1.12px;
-    max-width: 496px;
-    padding: 188px 0 48px;
-    margin: 0 auto;
-    text-align: center;
+    max-width: 320px;
+    max-height: 80px;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
+    margin: 112px auto 72px;
+    justify-content: space-between;
+    display: flex;
 }
+
 
 body {
     font-family: var(--main-font);
@@ -333,8 +336,8 @@ body {
 .main-button {
     border-radius: 4px;
     background: var(--icon-color);
-    width: 169px;
-    height: 56px;
+    min-width: 169px;
+    min-height: 56px;
     color: var(--background-color);
     font-family: Roboto;
     font-size: 16px;
@@ -905,9 +908,9 @@ footer a {
 
 .modal {
     position: absolute;
-    width: 408px;
+    width: 392px;
     height: 584px;
-    top: 80px;
+    top: 96px;
     left: 50%;
     translate: -50% 0;
     background: var(--background-color);
@@ -922,7 +925,7 @@ footer a {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
-    margin: 0 24px;
+    margin: 0;
 }
 
 .modal-box {
@@ -1105,6 +1108,14 @@ input[id="nletter-email"] {
     height: 16px;
 }
 
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution:2ddpx) {
+    .main-theme-box {
+        background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/background-mobile@2x.png");
+    }
+}
+
 @media screen and (min-width:320px) {
     body {
         overflow-x: hidden;
@@ -1116,6 +1127,35 @@ input[id="nletter-email"] {
 }
 
 @media screen and (min-width: 768px) {
+
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution:2ddpx) {
+        .main-theme-box {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/background-tablet@2x.png");
+        }
+    }
+
+
+.modal {
+    width: 408px;
+    height: 584px;
+}
+
+
+    .main-theme-box {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/background-tablet@1x.png");
+        max-width: 768px;
+    }
+
+    .main-theme-box h1 {
+        margin: 112px 136px 72px;
+        max-width: 496px;
+        max-height: 120px;
+        font-size: 56px;
+        letter-spacing: 1.12px;
+        line-height: 1.07;
+    }
 
     .container {
         max-width: 768px;
@@ -1273,4 +1313,20 @@ input[id="nletter-email"] {
     .nletter-button {
         margin: 140px 159px 132px 0px;
     }
+
+    .main-theme-box h1 {
+        max-width: 496px;
+        max-height: 120px;
+        margin: 188px auto 48px;
+        text-align: center;
+    }
+
+    .main-theme-box {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/main-background.jpg');
+        max-width: 1440px;
+        margin:  0 auto;
+        }
+
 }
+
+/* TEST commit*/
