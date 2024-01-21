@@ -110,8 +110,8 @@
 .js-menu-container {
     position: fixed;
     inset: 1;
-    
-    translate: -100% 0 0;
+    /*
+    translate: -100% 0 0;*/
     transition: transform 250ms ease-in-out;
     width: 100%;
     height: 100%;
@@ -1278,6 +1278,13 @@ input[id="nletter-email"] {
 (min-resolution:2ddpx) {
     .main-theme-box {
         background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/background-mobile@2x.png");
+    }
+}
+
+@media screen and (min-width:188px) {
+
+    .hamburger-button {
+        margin-left: 150px;
     }
 }
 
