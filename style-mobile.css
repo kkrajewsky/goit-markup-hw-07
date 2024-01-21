@@ -831,6 +831,8 @@ footer {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.32px;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -1438,6 +1440,9 @@ input[id="nletter-email"] {
         justify-content: flex-start;
     }
 
+    .nletter-style span {
+        justify-content: flex-start;
+    }
 
     .nletter-style {
         margin: 0px 24px 96px 108px;
