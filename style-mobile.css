@@ -110,8 +110,8 @@
 .js-menu-container {
     position: fixed;
     inset: 1;
-    /*
-    translate: -100% 0 0;*/
+    
+    translate: -100% 0 0;
     transition: transform 250ms ease-in-out;
     width: 100%;
     height: 100%;
@@ -673,6 +673,11 @@ footer {
     padding: 0;
 }
 
+.footer-margin a {
+    display: flex;
+    justify-content: center;
+}
+
 
 
 /* -------------------------------------------------------------------------- */
@@ -767,7 +772,7 @@ footer {
     display: flex;
     list-style-type: none;
     gap: 30px;
-    margin: 72px 0 120px;
+    margin: 72px 108px 96px;
     padding-inline-start: 0px;
     flex-wrap: wrap;
     justify-content: center;
@@ -1396,6 +1401,10 @@ input[id="nletter-email"] {
         
     }
 
+    .footer-margin a {
+        justify-content: flex-start;
+    }
+
     .footer-box .footer-margin {
         margin: 97.5px 24px 72px 108px;
         max-width: 264px;
@@ -1494,9 +1503,10 @@ input[id="nletter-email"] {
 
     .footer-box {
         display: flex;
+        flex-wrap: nowrap;
         align-items: flex-start;
         justify-content: center;
-        min-width: 1440px;
+        max-width: 1440px;
         padding: 0;
     }
 
