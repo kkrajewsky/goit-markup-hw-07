@@ -489,8 +489,11 @@ footer a {
     text-decoration: none;
 }
 
-.footer-box {
+footer {
     background-color: var(--dark-background-color);
+}
+
+.footer-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1242,6 +1245,7 @@ input[id="nletter-email"] {
 
     .container {
         max-width: 1158px;
+        padding: 0;
     }
 
     .solution-list {
@@ -1273,7 +1277,7 @@ input[id="nletter-email"] {
     }
 
     .team-list {
-        max-width: 1440px;
+        max-width: 1158px;
     }
 
     .customers-list {
@@ -1317,14 +1321,15 @@ input[id="nletter-email"] {
     .main-theme-box h1 {
         max-width: 496px;
         max-height: 120px;
-        margin: 188px auto 48px;
+        padding: 188px auto 48px;
         text-align: center;
     }
 
     .main-theme-box {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/main-background.jpg');
         max-width: 1440px;
-        margin:  0 auto;
+        min-height: 600px;
+        margin: 24px auto;
         }
 
 }
