@@ -105,9 +105,9 @@
 .close-button-box {
     background: none;
     border: none;
-    position: relative;
-    left: 88%;
-    top: 2%;
+    position: absolute;
+    right: 24px;
+    top: 24px;
 }
 
 .send-sub {
