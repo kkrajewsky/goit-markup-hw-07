@@ -85,7 +85,7 @@
     gap: 40px;
     text-transform: capitalize;
     padding: 0;
-    margin: 32px 240px 284px 40px;
+    flex-grow: 2;
 }
 
 
@@ -97,6 +97,9 @@
     font-weight: 700;
     line-height: 1.11;
     letter-spacing: 0.72px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .close-button-box {
@@ -107,16 +110,30 @@
     top: 2%;
 }
 
+.send-sub {
+    text-align: center;
+}
+
+.send-sub label {
+    color: var(--background-color);
+}
+
 .js-menu-container {
     position: fixed;
-    inset: 1;
     /*
-    translate: -100% 0 0;*/
-    transition: transform 250ms ease-in-out;
+    inset: 1;
+    transition: transform 250ms ease-in-out;*/
     width: 100%;
     height: 100%;
     background-color: var(--background-color);
     top: 0px;
+    transform: translateX(100%);
+    padding: 20px;
+
+}
+
+.js-menu-container.is-open {
+    transform: translateX(0);
 }
 
 .mobile-nav-list h3 {
@@ -128,10 +145,10 @@
     gap: 40px;
     display: flex;
     flex-direction: column;
-    margin: 0 35px 40px 40px;
     padding: 0;
     align-items: flex-start;
     font-style: normal;
+    margin-bottom: 40px;
 }
 
 .email-mobile {
@@ -147,11 +164,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 48px 40px 40px;
     padding: 0;
     display: flex;
-    gap: 56px;
-    justify-content: space-around;
+    justify-content: space-between;
+    max-width: 328px;
 }
 
 .mobile-box-icons li {
@@ -337,10 +353,13 @@ body {
 }
 
 .team-list {
-    background-color: var(--button-background);
     padding: 96px 0 96px;
     margin: 0 auto;
     flex-direction: column;
+}
+
+.team-bcg {
+    background-color: var(--button-background);
 }
 
 .team-list h2 {
@@ -646,6 +665,7 @@ footer a {
 
 footer {
     background-color: var(--dark-background-color);
+    padding: 80px 20px;
 }
 
 .footer-box {
@@ -669,8 +689,13 @@ footer {
 }
 
 .footer-margin {
-    margin: 97.5px auto 72px;
+    margin: auto;
     padding: 0;
+}
+
+.footer-margin a {
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -826,6 +851,8 @@ footer {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.32px;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -1042,7 +1069,6 @@ footer {
     padding: 6px;
     fill: var(--dark-background-color);
     background-color: var(--button-border);
-    margin-right: 24px;
 }
 
 .xbutton:active {
@@ -1200,6 +1226,7 @@ input label:focus {
     color: var(--button-text-color);
 }
 
+
 .send-button {
     text-align: center;
     width: 169px;
@@ -1274,6 +1301,13 @@ input[id="nletter-email"] {
     }
 }
 
+@media screen and (min-width:188px) {
+
+    .hamburger-button {
+        margin-left: 150px;
+    }
+}
+
 @media screen and (min-width:320px) {
     body {
         overflow-x: hidden;
@@ -1310,9 +1344,6 @@ input[id="nletter-email"] {
         }
     }
 
-.js-menu-container {
-    translate: -100% 0 0;
-}
 
 .contact-list {
     display: flex;
@@ -1396,8 +1427,12 @@ input[id="nletter-email"] {
         
     }
 
+    .footer-margin a {
+        justify-content: flex-start;
+    }
+
     .footer-box .footer-margin {
-        margin: 97.5px 24px 72px 108px;
+        margin: 0 24px 0 108px;
         max-width: 264px;
         max-height: 112px;
         
@@ -1410,28 +1445,30 @@ input[id="nletter-email"] {
     .social-footer h4 {
         padding: 0px;
         margin: 0px;
-        justify-content: flex-start;
+        justify-content: flex-center;
         display: flex;
+        color: var(--background-color);
+
+        
     }
 
     .social-footer {
         max-width: 208px;
-        max-height: 80px;
-    }
-
-    .social-footer {
-        margin: 96px auto 112px 0px;
+        margin: auto;
     }
 
     .footer-box {
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .nletter-style span {
         justify-content: flex-start;
     }
 
-
     .nletter-style {
-        margin: 0px 24px 96px 108px;
+        margin: 24px 0;
         width: 264px;
     }
     .mobile-sub-tittle {
@@ -1509,21 +1546,17 @@ input[id="nletter-email"] {
         opacity: 1;
     }
 
-    .social-footer {
-        margin: 100px 0 132px 0px;
-    }
-
     .nletter-style {
-        margin: 100px 24px 132px 80px;
+        margin: 0 24px 0 80px;
     }
 
     .footer-box .footer-margin {
-        margin: 101.5px 120px 100px 156px;
-        max-height: 72px;
+        /* margin: 0 120px 0 156px;
+        max-height: 72px; */
     }
 
     .nletter-button {
-        margin: 140px 159px 132px 0px;
+        margin: 31px 20px;
     }
 
     .main-theme-box h1 {
@@ -1559,5 +1592,3 @@ input[id="nletter-email"] {
             min-height: 72px;
         }
 }
-
-/* TEST commit*/
